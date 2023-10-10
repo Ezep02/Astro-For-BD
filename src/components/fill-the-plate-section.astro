@@ -1,0 +1,483 @@
+---
+
+import song from "../songs.json"
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+</head>
+<body>
+    
+    <div class="fill-the-plate-wrapper" id="lanzamientos">
+        <div class="open-music">
+            
+            <div class="open-music-box">
+                <div class="close-btn">
+                    
+                </div>
+                <div class="open-music-box-title">
+                    <h2><span class="aterisco">#</span>Escuchando</h2>
+                    
+                </div>
+               
+
+                <div class="open-music-box-video"></div>
+            </div>
+
+        </div>
+
+        <div class="last-relises">
+            <h2><span>#</span>Lanzamientos</h2>
+        </div>
+
+        <div class="song-wrapper">
+
+            <div class="song" id="ultimo-lanzamiento">
+                <div class="song-title">
+                    <h2>Mas reciente</h2>
+                </div>
+                {
+                    song.filter(song => song.age === "2023")
+                    .map((songData) => (    
+                        <div id=`${songData.id}` class="song-card">{
+                            <div class="icon"></div>
+                            <div class="title">{
+                                <h3><span>0{songData.track_num}-</span>{songData.song}</h3>
+                            }</div>
+                            <div class="min">{
+                                <p>{songData.min}</p>
+                            }</div>
+                        }</div> 
+                    ))
+                    
+                }
+            </div>
+
+            <div class="more-song-wrapper">
+
+                <div class="social-medias-wrapper">
+                    <div class="social-medias">
+                        <div class="youtube">
+                            
+        
+                            <a href="https://www.youtube.com/@JoacoKT" target="_blank" title="Go to Youtube">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="spotify">
+                            <a href="https://open.spotify.com/intl-es/artist/77MOr2gKQBxrMEkK4oSSiP" title="Go to Spotify" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="more-song">
+
+                    <div class="more-song-title">
+                        <h2><span>#</span>Tambien podes escuchar</h2>
+                    </div>
+
+                    <div class="more-songs-cards">
+                        <div class="song" id="2022">
+                            <div class="song-title">
+                                <h2><span>#</span>2022</h2>
+                            </div>
+                            {
+                                song.filter(song => song.age === "2022")
+                                .map((songData) => (    
+                                    <div id=`${songData.id}` class="song-card">{
+                                        <div class="icon"></div>
+                                        <div class="title">{
+                                            <h3><span>0{songData.track_num}-</span>{songData.song}</h3>
+                                        }</div>
+                                        <div class="min">{
+                                            <p>{songData.min}</p>
+                                        }</div>
+                                    }</div> 
+                                ))
+                                
+                            }
+                        </div>
+    
+                        <div class="song" id="2021">
+                            <div class="song-title">
+                                <h2><span>#</span>2021</h2>
+                            </div>
+                            {
+                                song.filter(song => song.age === "2021")
+                                .map((songData) => (    
+                                    <div id=`${songData.id}` class="song-card">{
+                                        <div class="icon"></div>
+                                        <div class="title">{
+                                            <h3><span>0{songData.track_num}-</span>{songData.song}</h3>
+                                        }</div>
+                                        <div class="min">{
+                                            <p>{songData.min}</p>
+                                        }</div>
+                                    }</div> 
+                                ))
+                                
+                            }
+                        </div>
+    
+                    </div>
+                   
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<style>
+    
+
+
+    .fill-the-plate-wrapper{
+        max-height: 100%;
+        min-height: 100vh;
+        width: 100%;
+        min-width: 360px;
+        overflow: hidden;
+        background: #080708;
+        background-image: url("../svg/clock-animation.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: color-dodge;
+    }
+    
+    .fill-the-plate-wrapper .last-relises {
+        display: flex;
+        justify-content: center;
+        padding: 0 1rem;
+        background: #0c0b0c;
+    }
+
+    .fill-the-plate-wrapper .last-relises h2{
+        color: #ffffff;
+    }
+    
+    .fill-the-plate-wrapper .last-relises h2 span{
+        color: #d7094e;
+    }
+    
+    
+    /* songs cards */
+    .fill-the-plate-wrapper .song-wrapper {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        min-width: 60%;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    .fill-the-plate-wrapper .song-wrapper .song {
+        background-color: #0a0a0a;
+        padding: 1rem;
+        min-width: 300px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .song .song-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .song .song-title h2 {
+        color: #ffffff;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .song .song-card {
+        background: #2a9b35;
+        margin: 3px 0;
+        padding: .1rem;
+        border-radius: .8rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    }
+    /*song card animations*/
+    .fill-the-plate-wrapper .song-wrapper .song .song-card:hover{
+        transform: scale(.98);
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .song .song-card .icon {
+        width: 5%;
+        height: 10px;
+        padding: 1rem;
+        border-radius: 50%;
+        background-image: url("../img/profile.png");
+        background-position: center;
+        background-size: cover;
+        
+        -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    }
+    .fill-the-plate-wrapper .song-wrapper .song .song-card .title{
+        width: 60%;
+    }
+    
+    .fill-the-plate-wrapper .song-wrapper .song .song-card .title h3{
+        color: #ffffff;
+        font-size: .9rem;
+        font-weight: 500;
+    } 
+
+
+    /* reproducto de video*/
+    .fill-the-plate-wrapper .open-music {
+        height: 100vh;
+        width: 100%;
+        min-width: 360px;
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+        z-index: 1;
+        
+    }   
+
+    
+
+    .fill-the-plate-wrapper .open-music .open-music-box {
+        height: 60%;
+        min-width: 40%;
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 49%, rgba(35,33,33,1) 100%);
+        border-radius: .4rem;
+        position: relative;
+        margin: 0 1rem;
+        
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .close-btn {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -2%;
+        right: -2%;
+        border-radius: 50%;
+        background: #e81111;
+        -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        cursor: pointer;
+        
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .close-btn:hover{
+        transform: scale(.9); 
+    }
+    .fill-the-plate-wrapper .open-music .open-music-box .close-btn h5 {
+        color: #ffffff;
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .close-btn h5:hover{
+        transform: scale(1.2);
+        color: #070404;
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title {
+        padding-top: .5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title h2 {
+        color: #ffffff;
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title .aterisco {
+        color: #d7094e;
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title .listen-now {
+        color: #1bca2d;
+        
+    }
+
+    .fill-the-plate-wrapper .open-music .open-music-box  .open-music-box-video {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+    /* right section about more music DATA*/
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper{
+        
+        border-radius: .8rem;
+        padding: 0 1rem;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+        border-radius: 1rem;
+        padding: 1rem;
+    }   
+
+    /* spotify */
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .spotify {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .spotify a svg{
+        height: 40px;
+        width: 40px;
+        border: 0;
+        color: #11891d;
+    }
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .spotify a svg:hover{
+        transform: scale(1.1);
+    }
+    /* youtube*/
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .youtube {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .youtube a svg{
+        height: 40px;
+        width: 40px;
+        border: 0;
+        color: #ff0000;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .youtube a svg:hover{
+        transform: scale(1.1);
+    }
+
+
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .more-song .more-songs-cards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .more-song .more-song-title h2 {
+        color: #ffffff;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .more-song .more-song-title h2 span {
+        color: #d7094e;
+    }   
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .more-song .more-songs-cards .song-title h2 span{
+        color: #d7094e;
+    }
+
+</style>
+
+<script>
+
+    import song from "../songs.json"
+
+    let choseSong = document.querySelectorAll(".song-card");
+
+    // Handle clicks to get element id
+    choseSong.forEach((songSelected) => {
+        songSelected.addEventListener('click', (e) => {
+            getElementInfo(songSelected.id);
+        });
+    });
+    
+    //pass and copare element id to get the correct info
+    const getElementInfo = (id) => {
+        let songID = id;
+
+        song.forEach(s => {
+            if(s.id == songID){
+                showVideo(s.src);
+            }
+        })
+        
+    }
+
+
+    //show video into wrapper
+    let openBox = document.querySelector(".open-music ")  as HTMLElement;
+    let videoBox = document.querySelector(".open-music-box-video")  as HTMLElement;
+    let songList = document.querySelector(".song-wrapper")  as HTMLElement;
+    let body = document.body;
+
+
+
+    const showVideo = (url) => {
+        
+        openBox.style.display = "flex";
+        songList.style.display = "none";
+        // Aplica un estilo CSS para ocultar el scrollbar
+        body.style.overflow = 'hidden';
+       
+        videoBox.innerHTML = `
+            <iframe width="560" height="350" loading="lazy" src="${url}"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture; web-share"></iframe>
+        `
+    }
+
+
+
+    
+    let closeBtn = document.querySelector(".close-btn");
+    closeBtn.addEventListener("click", ()=> {
+        closeViewVideo()
+    })
+
+    const closeViewVideo = () => {
+        openBox.style.display = "none"
+        songList.style.display = "flex";
+        body.style.overflow = 'auto';
+        videoBox.innerHTML = "";
+    }
+
+
+</script>

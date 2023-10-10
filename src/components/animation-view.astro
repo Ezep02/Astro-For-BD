@@ -1,0 +1,143 @@
+---
+
+const { textAnimation } = Astro.props;
+
+const length = textAnimation.length;
+const deg = 360 / length;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+  <div class="view-animation-wrapper">
+    <div class="spinning-div-wrapper">
+      <div class="spinning-text">
+        <p>
+          {
+            textAnimation
+              .split("")
+              .map((letra: unknown, i: number) => (
+                <span style={{ transform: `rotate(${deg * i}deg )` }}>
+                  {letra}
+                </span>
+              ))
+          }
+        </p>
+      </div>
+  
+      <h2>J-KT</h2>
+    </div>
+  
+    <div class="button">
+      
+      <a href="#main-home" title="home">Ir a inicio</a>
+      
+    </div>
+  </div>
+  
+</body>
+</html>
+<style>
+
+  
+
+  .view-animation-wrapper {
+    min-height: 100vh;
+    max-height: 100%;
+    min-width: 100%;
+    display: grid;
+    place-items: center;
+    background: #0a0808;
+    border-bottom: 1px solid #fff;
+  }
+
+  .view-animation-wrapper .spinning-div-wrapper {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    
+  }
+
+  .view-animation-wrapper .spinning-div-wrapper .spinning-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    animation: spin 50s linear infinite;
+    
+  }
+
+  .view-animation-wrapper .spinning-div-wrapper .spinning-text p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+
+  }
+
+  .view-animation-wrapper .spinning-div-wrapper h2 {
+    font-size: 5rem;
+    color: #d7094e;
+    
+  }
+
+  .view-animation-wrapper .spinning-div-wrapper .spinning-text span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 0 150px;
+  }
+
+  .view-animation-wrapper .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    background: rgb(240, 240, 240);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+  }
+
+  .view-animation-wrapper .button a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    outline: none;
+    border: none;
+    font-weight: bolder;
+    padding: 1rem;
+  }  
+  
+  .view-animation-wrapper .button:hover {
+    background: #d7094e;
+    transform: scale(.9);
+  }
+
+  .view-animation-wrapper .button:hover > a {
+    color: #c9c8c8;
+  }
+
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+     
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
