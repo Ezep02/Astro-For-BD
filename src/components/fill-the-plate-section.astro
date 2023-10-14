@@ -10,25 +10,25 @@ import song from "../songs.json"
     
     
 </head>
-<body>
+<body> 
+            
+    <div class="open-music">
+            
+        <div class="open-music-box">
+            <div class="close-btn"></div>
+            <div class="open-music-box-title">
+                <h2><span class="aterisco">#</span>Escuchando</h2>
+                
+            </div>
+           
+
+            <div class="open-music-box-video"></div>
+        </div>
+
+    </div>
     
     <div class="fill-the-plate-wrapper" id="lanzamientos">
-        <div class="open-music">
-            
-            <div class="open-music-box">
-                <div class="close-btn">
-                    
-                </div>
-                <div class="open-music-box-title">
-                    <h2><span class="aterisco">#</span>Escuchando</h2>
-                    
-                </div>
-               
 
-                <div class="open-music-box-video"></div>
-            </div>
-
-        </div>
 
         <div class="last-relises">
             <h2><span>#</span>Lanzamientos</h2>
@@ -62,14 +62,21 @@ import song from "../songs.json"
                 <div class="social-medias-wrapper">
                     <div class="social-medias">
                         <div class="youtube">
-                            
-        
                             <a href="https://www.youtube.com/@JoacoKT" target="_blank" title="Go to Youtube">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
                                     <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
                                 </svg>
                             </a>
                         </div>
+                        <div class="tik-tok">
+                            <a href="https://www.tiktok.com/@joaco_kt">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                                </svg>
+                                
+                            </a>
+                        </div>
+
                         <div class="spotify">
                             <a href="https://open.spotify.com/intl-es/artist/77MOr2gKQBxrMEkK4oSSiP" title="Go to Spotify" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
@@ -254,22 +261,26 @@ import song from "../songs.json"
 
 
     /* reproducto de video*/
-    .fill-the-plate-wrapper .open-music {
+    .open-music {
         height: 100vh;
         width: 100%;
         min-width: 360px;
         position: absolute;
+        
         display: none;
         justify-content: center;
         align-items: center;
         background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
-        z-index: 1;
+        z-index: 10;
         
     }   
 
+    .scroll-lock {
+        overflow: hidden;
+    }
     
 
-    .fill-the-plate-wrapper .open-music .open-music-box {
+    .open-music .open-music-box {
         height: 60%;
         min-width: 40%;
         background: rgb(0,0,0);
@@ -280,7 +291,7 @@ import song from "../songs.json"
         
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .close-btn {
+    .open-music .open-music-box .close-btn {
         height: 40px;
         width: 40px;
         display: flex;
@@ -298,38 +309,38 @@ import song from "../songs.json"
         
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .close-btn:hover{
+    .open-music .open-music-box .close-btn:hover{
         transform: scale(.9); 
     }
-    .fill-the-plate-wrapper .open-music .open-music-box .close-btn h5 {
+    .open-music .open-music-box .close-btn h5 {
         color: #ffffff;
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .close-btn h5:hover{
+    .open-music .open-music-box .close-btn h5:hover{
         transform: scale(1.2);
         color: #070404;
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title {
+    .open-music .open-music-box .open-music-box-title {
         padding-top: .5rem;
         display: flex;
         justify-content: center;
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title h2 {
+    .open-music .open-music-box .open-music-box-title h2 {
         color: #ffffff;
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title .aterisco {
+    .open-music .open-music-box .open-music-box-title .aterisco {
         color: #d7094e;
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box .open-music-box-title .listen-now {
+    .open-music .open-music-box .open-music-box-title .listen-now {
         color: #1bca2d;
         
     }
 
-    .fill-the-plate-wrapper .open-music .open-music-box  .open-music-box-video {
+    .open-music .open-music-box  .open-music-box-video {
         display: flex;
         justify-content: center;
         
@@ -396,6 +407,25 @@ import song from "../songs.json"
         transform: scale(1.1);
     }
 
+    /*tik-tok */
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .tik-tok {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .tik-tok a svg{
+        height: 40px;
+        width: 40px;
+        border: 0;
+        color: #f8f6f6;
+    }
+
+
+    .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .social-medias-wrapper .social-medias .tik-tok a svg:hover{
+        transform: scale(1.1);
+    }
+
 
 
     .fill-the-plate-wrapper .song-wrapper .more-song-wrapper .more-song .more-songs-cards{
@@ -440,7 +470,6 @@ import song from "../songs.json"
                 showVideo(s.src);
             }
         })
-        
     }
 
 
@@ -448,7 +477,15 @@ import song from "../songs.json"
     let openBox = document.querySelector(".open-music ")  as HTMLElement;
     let videoBox = document.querySelector(".open-music-box-video")  as HTMLElement;
     let songList = document.querySelector(".song-wrapper")  as HTMLElement;
-    let body = document.body;
+    // let body = document.body;
+
+    function bloquearScroll() {
+        document.body.classList.add('scroll-lock');
+    }
+
+    function desbloquearScroll() {
+        document.body.classList.remove('scroll-lock');
+    }
 
 
 
@@ -456,12 +493,14 @@ import song from "../songs.json"
         
         openBox.style.display = "flex";
         songList.style.display = "none";
-        // Aplica un estilo CSS para ocultar el scrollbar
-        body.style.overflow = 'hidden';
+        window.scrollTo(0, document.body.scrollHeight);
+        
+
        
         videoBox.innerHTML = `
             <iframe width="560" height="350" loading="lazy" src="${url}"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture; web-share"></iframe>
         `
+        bloquearScroll();
     }
 
 
@@ -469,15 +508,26 @@ import song from "../songs.json"
     
     let closeBtn = document.querySelector(".close-btn");
     closeBtn.addEventListener("click", ()=> {
+        desbloquearScroll()
         closeViewVideo()
+
     })
 
     const closeViewVideo = () => {
         openBox.style.display = "none"
         songList.style.display = "flex";
-        body.style.overflow = 'auto';
         videoBox.innerHTML = "";
     }
 
+    // Detectar cuando el usuario navega hacia atrás en la historia
+    window.addEventListener('popstate', function(event) {
+    // Verificar si la interfaz de la canción está abierta, si es así, desbloquear el scroll
+    if (videoBox.style.display != "none") {
+        openBox.style.display = "none";
+        songList.style.display = "flex";
+        videoBox.innerHTML = "";
+        desbloquearScroll();
+    }
+    });
 
 </script>
